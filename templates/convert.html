@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/styleConv.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:700" rel="stylesheet">
+  </head>
+  <body>
+    <div class="Area">
+      <!-- input section -->
+      <div class="converter">
+        <h1>Area Converter</h1>
+        <input type="number" placeholder="Input the value" id='input'>
+        <span>=</span>
+        <input type="number"  placeholder="Result" id="result">
+      </div>
+
+      <div class="options">
+        <select id="inputType">
+          <option value="Khetmuri">Khetmuri</option>
+          <option value="Ropani">Ropani</option>
+          <option value="Bigha">Bigha</option>
+          <option value="Kattha">Kattha</option>
+          <option value="Square meter (m^2)">Square meter (m^2)</option>
+          <option value="Dhur">Dhur</option>
+          <option value="Aana">Aana</option>
+          <option value="Paisa">Paisa</option>
+          <option value="Square foot (ft^2)">Square foot (ft^2)</option>
+          <option value="Daam">Daam</option>
+          <option value="llka">llka</option>
+        </select>
+
+        <select id="resultType">
+          <option value="Khetmuri">Khetmuri</option>
+          <option value="Ropani">Ropani</option>
+          <option value="Bigha">Bigha</option>
+          <option value="Kattha">Kattha</option>
+          <option value="Square meter (m^2)">Square meter (m^2)</option>
+          <option value="Dhur">Dhur</option>
+          <option value="Aana">Aana</option>
+          <option value="Paisa">Paisa</option>
+          <option value="Square foot (ft^2)">Square foot (ft^2)</option>
+          <option value="Daam">Daam</option>
+          <option value="llka">llka</option>
+        </select>
+      </div>
+      </div>
+    <script src="{% static 'js/mainConv.js' %}"></script>
+  </body>
+</html>

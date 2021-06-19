@@ -1,0 +1,48 @@
+body {
+  padding-top: 20px;
+  background-color: #202020;
+  color: white;
+
+}
+
+h1 {
+  color: #E5E5E5;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing:
+  font-weight: 700;
+}
+
+
+.converter{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.converter input{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 10px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.options{
+  text-align: center;
+  box-sizing: border-box;
+}
+#inputType{
+  height: 20px;
+  width: 269px;
+  margin-left: 0px;
+}
+#resultType{
+  height: 20px;
+  width: 269px;
+  margin-left: 15px;
+}
