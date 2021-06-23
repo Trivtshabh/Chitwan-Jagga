@@ -84,7 +84,7 @@ class locationDeleteView(LoginRequiredMixin, DeleteView):
 
 class ProductListView(ListView):
     model = Product
-    template_name = 'index'
+    template_name = 'cj/list_product.html'
     context_object_name = 'products'
 
 class ProductAddView(LoginRequiredMixin, CreateView):
