@@ -25,7 +25,7 @@
   <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/stylech.css' %}" rel="stylesheet">
 
 </head>
 
@@ -163,6 +163,10 @@
 
         <div class ="col-log-3">
 
+
+
+
+
                             {% if product.image %}
                                 <img src="{{ product.image.url }}" alt = "Image not found" height="100px">
                             {% else %}
@@ -194,6 +198,21 @@
         </div>
 
         {% endfor %}
+
+
+        <!-- THE CATEGORIES FILTER -->
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-rent">Rent</li>
+            <li data-filter=".filter-sale">Sale</li>
+            <li data-filter=".filter-house">House</li>
+            <li data-filter=".filter-land">Land</li>
+          </ul>
+        </div>
+      </div>
+
 
         <div id="property-carousel" class="owl-carousel owl-theme">
           <div class="carousel-item-b">
@@ -240,7 +259,8 @@
             </div>
 
           </div>
-          <div class="carousel-item-b">
+          <div class="carousel-item-b filter-house">
+            <!-- FILTER HOUSE, Similarly Filter for other category -->
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
                 <img id="pptImage" src="{% static 'img/house2.jpg' %}" alt="" class="img-a img-fluid">
@@ -284,7 +304,7 @@
             </div>
           </div>
 
-          <div class="carousel-item-b">
+          <div class="carousel-item-b filter-house">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
                 <img id="pptImage" src="{% static 'img/house3.jpg' %}" alt="" class="img-a img-fluid">
@@ -329,7 +349,7 @@
             </div>
           </div>
 
-          <div class="carousel-item-b">
+          <div class="carousel-item-b filter-house">
             <div class="card-box-a card-shadow">
               <div class="img-box-a">
                 <img id="pptImage" src="{% static 'img/house4.jpg' %}" alt="" class="img-a img-fluid">
