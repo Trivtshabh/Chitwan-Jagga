@@ -14,3 +14,6 @@ def index(request):
 
 def convert(request):
     return render(request, 'convert.html',{})
+
+def all_products(request):
+    return render(request, 'all_products.html',{})

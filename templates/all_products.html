@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Chitwan Jagga</title>
+  <title>All Products</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -25,13 +25,13 @@
   <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/stylech.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <!-- ======= Header/Navbar ======= -->
+    <!-- ======= Header/Navbar ======= -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,140 +68,12 @@
       </div>
     </div>
   </nav>
-  <!-- End Header/Navbar -->
+<!-- End Header/Navbar -->
 
-  <!-- ======= Intro Section ======= -->
-  <div class="intro intro-carousel">
-    <div id="carousel" class="owl-carousel owl-theme">
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/bg1.jpg' %})">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <p class="intro-title-top">Brought to you by
-                    </p>
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">Global Vision </span>
-                      <br><span class="color-c">Real Estate Pvt. Ltd.</span>
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">Bharatpur, Chitwan</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/bg1.jpg' %})">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">A journey to </span>
-                      <br> dream, hope and fulfillment.
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">Bharatpur, Chitwan</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item-a intro-item bg-image" style="background-image: url({% static 'img/bg1.jpg' %})">
-        <div class="overlay overlay-a"></div>
-        <div class="intro-content display-table">
-          <div class="table-cell">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="intro-body">
-                    <h1 class="intro-title mb-4">
-                      <span class="color-b">Planning to buy or rent, </span>
-                      <br> House and Land ?
-                    </h1>
-                    <p class="intro-subtitle intro-price">
-                      <a href="#"><span class="price-a">chitwanjagga.com</span></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- End Intro Section -->
-
-  <br>
-  <div class="title-box">
-    <h2 class="title-a text-center"> This WebSite is still in Development Phase, We are Coming Soon</h2>
-  </div>
-
-  <main id="main">
-
-    <!-- ======= Latest Properties Section ======= -->
-    <section class="section-property section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Latest Properties</h2>
-		<p> For UNIT CONVERSIONS check our <a href="convert.html"  </a>Converter page </p>
-              </div>
-              <div class="title-link">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {% for product in products %}
-
-        <div class ="col-log-3">
-                            {% if product.image %}
-                                <img src="{{ product.image.url }}" alt = "Image not found" height="100px">
-                            {% else %}
-                                No Photo Avaliable
-                            {% endif %}
-            <div class ="box-element name">
-                <h6><strong>{{ product.name }}</strong></h6>
-                <hr>
-                <h6>{{ product.location }}</h6>
-                <h6>Rs:{{ product.price }}</h6>
-                {% if user.is_authenticated %}
-             <a href="{% url 'cj:edit_product' pk=product.pk %}">
-                 <button class="btn btn-warning">Edit</button>
-             </a>
-                {% endif %}
-                {% if user.is_authenticated %}
-                <a href="{% url 'cj:delete_product' pk=product.pk %}">
-                    <button class="btn btn-danger">Delete</button>
-                </a>
-                {% endif %}
-
-            <a href="{% url 'cj:details_product' pk=product.pk %}">
-                <button class="btn btn-primary">view more</button>
-
-            </a>
-            </div>
-        </div>
-
-        {% endfor %}
-
+  <br><br><br><br>
 
         <!-- THE CATEGORIES FILTER -->
+        <br><br><br><br>
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
         <ul id="portfolio-flters">
@@ -214,14 +86,61 @@
         </div>
       </div>
 
+  <main id="main">
 
-        <div id="property-carousel" class="owl-carousel owl-theme">
-          <div class="carousel-item-b">
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house1.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
+    <br><br><br><br>
+    <!-- ======= All Properties Section ======= -->
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house1.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">Bharatpur</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <a href="#" class="link-a">Click here to view
+                      <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Area</h4>
+                        <span>- m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Beds</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Parking</h4>
+                        <span>- </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house2.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
@@ -257,16 +176,15 @@
                   </div>
                 </div>
               </div>
-            </div>
-
           </div>
-          <div class="carousel-item-b filter-house">
-            <!-- FILTER HOUSE, Similarly Filter for other category -->
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house2.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house3.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
@@ -274,7 +192,7 @@
                     </h2>
                   </div>
                   <div class="card-body-a">
-                    <a href="" class="link-a">Click here to view
+                    <a href="#" class="link-a">Click here to view
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>
@@ -282,7 +200,7 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>-m
+                        <span>- m
                           <sup>2</sup>
                         </span>
                       </li>
@@ -302,24 +220,23 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
+        </div>
 
-          <div class="carousel-item-b filter-house">
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house3.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house4.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">Munal
-                        <br /> Chowk</a>
+                      <a href="#">Bharatpur</a>
                     </h2>
                   </div>
                   <div class="card-body-a">
-                    <a href="" class="link-a">Click here to view
+                    <a href="#" class="link-a">Click here to view
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>
@@ -327,7 +244,7 @@
                     <ul class="card-info d-flex justify-content-around">
                       <li>
                         <h4 class="card-info-title">Area</h4>
-                        <span>-m
+                        <span>- m
                           <sup>2</sup>
                         </span>
                       </li>
@@ -347,259 +264,200 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="carousel-item-b filter-house">
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house4.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
-                <div class="card-overlay-a-content">
-                  <div class="card-header-a">
-                    <h2 class="card-title-a">
-                      <a href="#">Milan
-                        <br> Chowk</a>
-                    </h2>
-                  </div>
-                  <div class="card-body-a">
-                    <a href="" class="link-a">Click here to view
-                      <span class="ion-ios-arrow-forward"></span>
-                    </a>
-                  </div>
-                  <div class="card-footer-a">
-                    <ul class="card-info d-flex justify-content-around">
-                      <li>
-                        <h4 class="card-info-title">Area</h4>
-                        <span>-m
-                          <sup>2</sup>
-                        </span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Beds</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Baths</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Parking</h4>
-                        <span>-</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item-b">
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house6.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
-                <div class="card-overlay-a-content">
-                  <div class="card-header-a">
-                    <h2 class="card-title-a">
-                      <a href="#">Bharatpur-9
-                        <br> Near Home Cottage</a>
-                    </h2>
-                  </div>
-                  <div class="card-body-a">
-                    <a href="" class="link-a">Click here to view
-                      <span class="ion-ios-arrow-forward"></span>
-                    </a>
-                  </div>
-                  <div class="card-footer-a">
-                    <ul class="card-info d-flex justify-content-around">
-                      <li>
-                        <h4 class="card-info-title">Area</h4>
-                        <span>
-                          13 Dhur
-                        </span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Beds</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Baths</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Price</h4>
-                        <span>1.65 Crore</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item-b">
-            <div class="card-box-a card-shadow">
-              <div class="img-box-a">
-                <img id="pptImage" src="{% static 'img/house5.jpg' %}" alt="" class="img-a img-fluid">
-              </div>
-              <div class="card-overlay">
-                <div class="card-overlay-a-content">
-                  <div class="card-header-a">
-                    <h2 class="card-title-a">
-                      <a href="#">Bharatpur-23
-                        <br> Telauli</a>
-                    </h2>
-                  </div>
-                  <div class="card-body-a">
-                    <a href="" class="link-a">Click here to view
-                      <span class="ion-ios-arrow-forward"></span>
-                    </a>
-                  </div>
-                  <div class="card-footer-a">
-                    <ul class="card-info d-flex justify-content-around">
-                      <li>
-                        <h4 class="card-info-title">Area</h4>
-                        <span>16 Katha</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Beds</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Baths</h4>
-                        <span>-</span>
-                      </li>
-                      <li>
-                        <h4 class="card-info-title">Price</h4>
-                        <span>11.5 Lakhs Per Katha</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </section><!-- End Latest Properties Section -->
 
-    <!-- ======= Agents Section ======= -->
-    <a name="team"></a>
-    <div class="py-5 team4">
-      <div class="container">
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-7 text-center">
-            <h3 class="mb-3">Experienced & Professional Team</h3>
+    <br><br><br>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house1.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">Bharatpur</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <a href="#" class="link-a">Click here to view
+                      <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Area</h4>
+                        <span>- m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Beds</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Parking</h4>
+                        <span>- </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <!-- column  -->
-          <div class="col-lg-3 mb-4">
-            <!-- Row -->
-            <div class="row">
-              <div class="col-md-12">
-                <img id="teamImg" src="{% static 'img/sujan.png' %}" alt="" class="img-fluid rounded-circle" />
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="pt-2">
-                  <h5 class="mt-4 font-weight-medium mb-0">Sujan Bhattrai</h5>
-                  <h6 class="subtitle mb-3">Chair-Person</h6>
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/sujan.bhattarai.547" class="btn"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-envelope-o"></i></a></li>
-                    <li class="list-inline-item"><a href="tel:+977-9855082644" class="btn"><i class="fa fa-phone"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Row -->
-          </div>
-          <!-- column  -->
-          <!-- column  -->
-          <div class="col-lg-3 mb-4">
-            <!-- Row -->
-            <div class="row">
-              <div class="col-md-12">
-                <img id="teamImg" src="{% static 'img/navin.png' %}" alt="" class="img-fluid rounded-circle" />
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="pt-2">
-                  <h5 class="mt-4 font-weight-medium mb-0">Navin Khanal</h5>
-                  <h6 class="subtitle mb-3">Property Specialist</h6>
 
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.facebook.com/navin.khanal.35" class="btn"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-envelope-o"></i></a></li>
-                    <li class="list-inline-item"><a href="tel:+977-9865075947" class="btn"><i class="fa fa-phone"></i></a></li>
-                  </ul>
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house2.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">Bharatpur</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <a href="#" class="link-a">Click here to view
+                      <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Area</h4>
+                        <span>- m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Beds</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Parking</h4>
+                        <span>- </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Row -->
           </div>
-          <!-- column  -->
-          <!-- column  -->
-          <div class="col-lg-3 mb-4">
-            <!-- Row -->
-            <div class="row">
-              <div class="col-md-12">
-                <img id="teamImg" src="{% static 'img/bhim.png' %}" alt="" class="img-fluid rounded-circle" />
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="pt-2">
-                  <h5 class="mt-4 font-weight-medium mb-0">Bhim Raj Gurung</h5>
-                  <h6 class="subtitle mb-3">Property Specialist</h6>
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-envelope-o"></i></a></li>
-                    <li class="list-inline-item"><a href="tel:+977-9865022204" class="btn"><i class="fa fa-phone"></i></a></li>
-                  </ul>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house3.jpg' %}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">Bharatpur</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <a href="#" class="link-a">Click here to view
+                      <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Area</h4>
+                        <span>- m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Beds</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Parking</h4>
+                        <span>- </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Row -->
           </div>
-          <!-- column  -->
-          <!-- column  -->
-          <div class="col-lg-3 mb-4">
-            <!-- Row -->
-            <div class="row">
-              <div class="col-md-12">
-                <img id="teamImg" src="{% static 'img/gautam.png' %}" alt="" class="img-fluid rounded-circle" />
-              </div>
-              <div class="col-md-12 text-center">
-                <div class="pt-2">
-                  <h5 class="mt-4 font-weight-medium mb-0">Gautam Gurung</h5>
-                  <h6 class="subtitle mb-3">Property Specialist</h6>
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" class="btn"><i class="fa fa-envelope-o"></i></a></li>
-                    <li class="list-inline-item"><a href="tel:+977-9860612505" class="btn"><i class="fa fa-phone"></i></a></li>
-                  </ul>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="img-box-a">
+                <img src="{% static 'img/house4.jpg'%}" alt="" class="img-a img-fluid">
+            </div>
+            <div class="card-overlay">
+                <div class="card-overlay-a-content">
+                  <div class="card-header-a">
+                    <h2 class="card-title-a">
+                      <a href="#">Bharatpur</a>
+                    </h2>
+                  </div>
+                  <div class="card-body-a">
+                    <a href="#" class="link-a">Click here to view
+                      <span class="ion-ios-arrow-forward"></span>
+                    </a>
+                  </div>
+                  <div class="card-footer-a">
+                    <ul class="card-info d-flex justify-content-around">
+                      <li>
+                        <h4 class="card-info-title">Area</h4>
+                        <span>- m
+                          <sup>2</sup>
+                        </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Beds</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Baths</h4>
+                        <span>- </span>
+                      </li>
+                      <li>
+                        <h4 class="card-info-title">Parking</h4>
+                        <span>- </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- Row -->
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Agents Section -->
-
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <section class="section-footer" id="contact">
+  <section class="section-footer">
     <div class="container">
-      <h3 class="w-title-a text-brand" align="center">Contact Persons:</h3>
       <div class="row">
         <div class="col-sm-12 col-md-4 text-center">
           <div class="widget-a">
-            <div class="w-body-a"><br><br>
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">Contact Persons:</h3>
+            </div>
+            <div class="w-body-a">
               <p class="w-text-a color-text-a">
                 Sujan Bhattrai (Chair-Person)
               </p>
@@ -616,7 +474,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-sm-12 col-md-4 text-center">
           <div class="widget-a">
             <div class="w-body-a"><br><br>
@@ -631,12 +488,7 @@
                 </li>
               </ul>
             </div>
-            </div>
-            </div>
-
-            <div class="col-sm-12 col-md-4 text-center">
-              <div class="widget-a">
-                <div class="w-body-a"><br><br>
+            <div class="w-body-a">
               <p class="w-text-a color-text-a">
                 Ranjit Timilsina
               </p>
@@ -650,7 +502,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-sm-12 col-md-4 text-center">
           <div class="widget-a">
             <div class="w-body-a"><br><br>
@@ -665,13 +516,8 @@
                 </li>
               </ul>
             </div>
-            </div>
-            </div>
-
-            <div class="col-sm-12 col-md-4 text-center">
-              <div class="widget-a">
-                <div class="w-body-a"><br><br>
-                  <p class="w-text-a color-text-a">
+            <div class="w-body-a">
+              <p class="w-text-a color-text-a">
                 Gautam Gurung
               </p>
             </div>
@@ -684,7 +530,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -706,7 +551,7 @@
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->

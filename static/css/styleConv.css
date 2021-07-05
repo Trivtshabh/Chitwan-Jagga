@@ -1,7 +1,7 @@
 body {
   padding-top: 20px;
-  background-color: #202020;
-  color: white;
+  background-color: #FFFFFF;
+  color: black;
 
 }
 
@@ -22,7 +22,7 @@ h1 {
   box-sizing: border-box;
 }
 
-.converter input{
+/* .converter input{
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: center;
@@ -30,19 +30,81 @@ h1 {
   height: 30px;
   box-sizing: border-box;
   padding: 20px;
-}
+} */
 
 .options{
   text-align: center;
   box-sizing: border-box;
 }
-#inputType{
+/* #inputType{
   height: 20px;
   width: 269px;
   margin-left: 0px;
+  padding: 15px;
 }
 #resultType{
   height: 20px;
   width: 269px;
   margin-left: 15px;
+  padding: 15px;
+} */
+
+@media (min-width: 768px) {
+  #inputType{
+
+    height: 60px;
+    width: 300px;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid;
+  }
+
+  #resultType{
+
+    height: 60px;
+    width: 300px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid;
+  }
+
+  .converter input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    border: 1px solid;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #inputType{
+    height: 20px;
+    width: 269px;
+    margin-left: 0px;
+    padding: 15px;
+  }
+
+  #resultType{
+    height: 20px;
+    width: 269px;
+    margin-left: 15px;
+    padding: 15px;
+  }
+
+  .converter input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 20px;
+  }
 }
