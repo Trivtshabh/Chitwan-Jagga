@@ -16,4 +16,7 @@ def convert(request):
     return render(request, 'convert.html',{})
 
 def all_products(request):
-    return render(request, 'all_products.html',{})
+    products = Product.objects.all()
+    return render(request, 'all_products.html',{'products':products})
+    #TODO: all_products.html has a css antipattern. div class="row" makes 
+    # it impossible to loop through. Please use flex or grid
